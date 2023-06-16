@@ -11,11 +11,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "lint-staged": {
-    "\"src/**/*.{ts,tsx}\" \"test/**/*.{ts,tsx}\"": ["yarn prettier --write"]
+    "\"src/**/*.{ts,tsx}\" \"test/**/*.{ts,tsx}\"": [
+      "yarn prettier --write"
+    ]
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.5",
@@ -31,7 +34,9 @@
     "husky": "^8.0.0",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
+    "sass": "^1.63.4",
     "typescript": "^5.0.2",
+    "typescript-plugin-css-modules": "^5.0.1",
     "vite": "^4.3.9"
   }
 }
