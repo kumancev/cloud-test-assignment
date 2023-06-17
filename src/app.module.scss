@@ -1,3 +1,5 @@
+@import '@styles/mixins.scss';
+
 .appWrapper {
   position: absolute;
   width: 900px;
@@ -6,4 +8,16 @@
   top: 1.5rem;
   background-color: #fff;
   border-radius: 1.5rem;
+
+  @include mediaMax(920) {
+    width: 580px;
+    height: 600px;
+    left: calc(50% - 580px / 2);
+  }
+
+  @include mediaMax(560) {
+    width: 360px;
+    height: 600px;
+    left: calc(50% - 360px / 2);
+  }
 }

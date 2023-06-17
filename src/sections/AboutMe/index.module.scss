@@ -1,3 +1,5 @@
+@import '@styles/mixins.scss';
+
 .headerWrapper {
   height: 8.125rem;
   margin: 0 1.6rem;
@@ -20,6 +22,10 @@
       font-weight: 600;
       font-size: 1.25em;
       line-height: 1.625em;
+
+      @include mediaMax(560) {
+        font-size: 1.05em;
+      }
     }
 
     .userLinks {
