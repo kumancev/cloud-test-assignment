@@ -1,4 +1,5 @@
 import avatar from '@assets/avatar.png'
+import StartForm from '@components/StartForm/StartForm'
 import UserLink from '@components/UserLink/UserLink'
 import { linkData } from '@mocks/data'
 import styles from './index.module.scss'
@@ -16,6 +17,9 @@ const AboutMe = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div>
+        <StartForm />
       </div>
     </>
   )

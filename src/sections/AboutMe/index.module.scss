@@ -1,20 +1,20 @@
 .headerWrapper {
   height: 8.125rem;
-  margin: 1.6rem;
+  margin: 0 1.6rem;
   display: flex;
+  align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 
   .userLogo {
     width: 80px;
     height: 80px;
-    margin: 1.5rem;
+    margin: 0 1.6rem 0 0;
   }
 
   .userInfo {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin: 1.5rem 0;
 
     h3 {
       font-weight: 600;
