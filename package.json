@@ -16,7 +16,7 @@
     "react-dom": "^18.2.0"
   },
   "lint-staged": {
-    "\"src/**/*.{ts,tsx}\" \"test/**/*.{ts,tsx}\"": [
+    "\"src/*\" \"src/**/*.{ts,tsx}\" \"test/**/*.{ts,tsx}\"": [
       "yarn prettier --write"
     ]
   },
