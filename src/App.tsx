@@ -1,7 +1,9 @@
+import AboutMe from './sections/AboutMe/AboutMe'
+
 function App() {
   return (
     <>
-      <h1>Hello</h1>
+      <AboutMe />
     </>
   )
 }

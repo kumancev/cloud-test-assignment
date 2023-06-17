@@ -1,0 +1,29 @@
+.headerWrapper {
+  height: 8.125rem;
+  margin: 1.6rem;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  .userLogo {
+    width: 80px;
+    height: 80px;
+    margin: 1.5rem;
+  }
+
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 1.5rem 0;
+
+    h3 {
+      font-weight: 600;
+      font-size: 1.25em;
+      line-height: 1.625em;
+    }
+
+    .userLinks {
+      display: flex;
+    }
+  }
+}

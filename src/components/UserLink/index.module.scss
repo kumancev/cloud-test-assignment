@@ -1,0 +1,16 @@
+.linkWrapper {
+  display: flex;
+
+  .folderIcon {
+    margin-right: 0.375rem;
+  }
+
+  .linkName {
+    color: $purple;
+    margin-right: 1.1rem;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75em;
+  }
+}
