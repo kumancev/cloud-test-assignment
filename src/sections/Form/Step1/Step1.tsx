@@ -110,7 +110,6 @@ const Step1 = () => {
                 components={{
                   IndicatorSeparator: () => null,
                 }}
-                menuIsOpen={true}
               />
             )}
             rules={{ required: true }}
