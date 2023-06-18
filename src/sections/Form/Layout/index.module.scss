@@ -24,4 +24,12 @@
 
 .content {
   margin: 3.875rem 6.875rem 5.75rem;
+
+  @include mediaMax(920) {
+    margin: 0 2rem;
+  }
+
+  @include mediaMax(560) {
+    margin: 0 1rem;
+  }
 }
