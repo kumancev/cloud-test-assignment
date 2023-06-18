@@ -53,7 +53,12 @@ const options = [
 ]
 
 const Step1 = () => {
-  const { register, handleSubmit, control } = useForm()
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    control,
+  } = useForm()
   const navigate = useNavigate()
 
   const onSubmit = (data: any) => {
@@ -87,7 +92,24 @@ const Step1 = () => {
     <>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="field-nickname">Nickname</label>
-        <input id="field-nickname" type="text" {...register('nickname')} />
+        <input
+          id="field-nickname"
+          type="text"
+          {...register('nickname', {
+            required: true,
+            validate: {
+              minLength: (v) => v.length >= 5,
+              matchPattern: (v) => /^[a-zA-Z0-9_]+$/.test(v),
+            },
+          })}
+        />
+        {errors.nickname?.type === 'required' && <p>Nickname is required</p>}
+        {errors.nickname?.type === 'minLength' && (
+          <p>The nickname should have at least 5 characters</p>
+        )}
+        {errors.nickname?.type === 'matchPattern' && (
+          <p>Nickname must contain only letters, numbers and _</p>
+        )}
 
         <label htmlFor="field-name">Name</label>
         <input id="field-name" type="text" {...register('name')} />
@@ -96,7 +118,7 @@ const Step1 = () => {
         <input id="field-surname" type="text" {...register('surname')} />
 
         <label>Sex</label>
-        <div id="field-sex" style={{ width: '400px' }}>
+        <div id="field-sex" style={{ width: '100%', maxWidth: '400px' }}>
           <Controller
             name="field-sex"
             control={control}
@@ -112,7 +134,6 @@ const Step1 = () => {
                 }}
               />
             )}
-            rules={{ required: true }}
           />
         </div>
         <div className={styles.btnGroup}>
