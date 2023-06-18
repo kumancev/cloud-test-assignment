@@ -15,9 +15,9 @@ const MyForm = () => {
   return (
     <>
       <form className={styles.startForm} onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="phone">Номер телефона</label>
+        <label >Номер телефона</label>
         <input {...register('phone')} placeholder="+7 900 201-23-33" />
-        <label htmlFor="email">Email</label>
+        <label >Email</label>
         <input {...register('email')} placeholder="kumancev1@gmail.com" />
         <button type="submit">Начать</button>
       </form>

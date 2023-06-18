@@ -95,7 +95,7 @@ const Step1 = () => {
         <label htmlFor="field-surname">Surname</label>
         <input id="field-surname" type="text" {...register('surname')} />
 
-        <label htmlFor="field-sex">Sex</label>
+        <label>Sex</label>
         <div id="field-sex" style={{ width: '400px' }}>
           <Controller
             name="field-sex"
