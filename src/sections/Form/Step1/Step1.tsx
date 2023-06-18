@@ -37,7 +37,7 @@ const customStyles = {
     margin: 0,
     padding: 0,
   }),
-  option: (base: any, { data, isDisabled, isFocused, isSelected }: any) => {
+  option: (base: any, { isFocused }: any) => {
     return {
       ...base,
       height: '44px',
