@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { updateStepState } from '../../../features/stepper/stepperSlice'
-import { Step } from '../../../features/stepper/stepperSlice'
-import { RootState } from '../../../app/store'
+import { updateStepState } from '@features/stepper/stepperSlice'
+import { Step } from '@features/stepper/stepperSlice'
+import { RootState } from '@app/store'
 
 const Step2 = () => {
   const dispatch = useDispatch()

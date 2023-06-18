@@ -1,7 +1,7 @@
 import checkIcon from '@assets/check-icon.svg'
 import dotIcon from '@assets/dot-icon.svg'
-import { useAppDispatch, useAppSelector } from '../../app/hooks'
-import { updateStepState } from '../../features/stepper/stepperSlice'
+import { useAppDispatch, useAppSelector } from '@app/hooks'
+import { updateStepState } from '@features/stepper/stepperSlice'
 import './index.css'
 
 const Stepper = () => {

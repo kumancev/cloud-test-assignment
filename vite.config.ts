@@ -11,15 +11,17 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, './src/styles'),
       '@components': path.resolve(__dirname, './src/components'),
       '@assets': path.resolve(__dirname, './src/assets'),
+      '@app': path.resolve(__dirname, './src/app'),
+      '@features': path.resolve(__dirname, './src/features'),
       '@mocks': path.resolve(__dirname, './src/mocks'),
       '@helpers': path.resolve(__dirname, './src/helpers'),
-    }
+    },
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "@styles/pallete.scss" as *;`
-      }
-    }
+        additionalData: `@use "@styles/pallete.scss" as *;`,
+      },
+    },
   },
 })
