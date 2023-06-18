@@ -2,10 +2,18 @@ import { useDispatch, useSelector } from 'react-redux'
 import { updateStepState } from '@features/stepper/stepperSlice'
 import { Step } from '@features/stepper/stepperSlice'
 import { RootState } from '@app/store'
+import { useForm } from 'react-hook-form'
+import styles from './index.module.scss'
 
 const Step2 = () => {
   const dispatch = useDispatch()
   const steps = useSelector((state: RootState) => state.stepper.steps)
+  const { register, handleSubmit } = useForm()
+
+  const onSubmit = (data: any) => {
+    console.log(data)
+    handleCompleteStep()
+  }
 
   const currentStepIndex = steps.findIndex(
     (step: Step) => step.state === 'active'
@@ -32,11 +40,25 @@ const Step2 = () => {
   }
 
   return (
-    <div>
-      <div>Step 2</div>
-      <button onClick={handleCompleteStep}>Complete Step</button>
-      <button onClick={handleGoBack}>Go Back</button>
-    </div>
+    <>
+      <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+        <label htmlFor="field-nickname">Nickname</label>
+        <input id="field-nickname" type="text" {...register('nickname')} />
+
+        <label htmlFor="field-name">Name</label>
+        <input id="field-name" type="text" {...register('name')} />
+
+        <label htmlFor="field-surname">Surname</label>
+        <input id="field-surname" type="text" {...register('surname')} />
+
+        <div className={styles.btnGroup}>
+          <button className={styles.btnBack} onClick={handleGoBack}>
+            Назад
+          </button>
+          <button type="submit">Далее</button>
+        </div>
+      </form>
+    </>
   )
 }
 

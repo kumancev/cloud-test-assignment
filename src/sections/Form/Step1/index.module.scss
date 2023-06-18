@@ -34,26 +34,6 @@
     }
   }
 
-  select {
-    width: 400px;
-    padding: 12px;
-    height: 2.75rem;
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.16);
-    border-radius: 0.25em;
-
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.48);
-
-    &:not(:last-child) {
-      margin-bottom: 1.5rem;
-    }
-
-    @include mediaMax(560) {
-      width: 280px;
-    }
-  }
-
   button {
     margin-top: 48px;
     width: 79px;

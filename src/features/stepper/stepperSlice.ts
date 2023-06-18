@@ -33,7 +33,10 @@ export const stepperSlice = createSlice({
         step.state = newState
       }
     },
+    resetStepState: () => {
+      return initialState
+    },
   },
 })
-export const { updateStepState } = stepperSlice.actions
+export const { updateStepState, resetStepState } = stepperSlice.actions
 export default stepperSlice.reducer

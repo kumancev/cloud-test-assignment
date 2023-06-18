@@ -119,7 +119,7 @@ const Step1 = () => {
           <button className={styles.btnBack} onClick={redirectSubmit}>
             Назад
           </button>
-          <button type="submit">Submit</button>
+          <button type="submit">Далее</button>
         </div>
       </form>
     </>
