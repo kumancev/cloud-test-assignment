@@ -18,7 +18,8 @@
     "react-hook-form": "^7.44.3",
     "react-icons": "^4.9.0",
     "react-redux": "^8.1.0",
-    "react-router-dom": "^6.13.0"
+    "react-router-dom": "^6.13.0",
+    "react-select": "^5.7.3"
   },
   "lint-staged": {
     "\"src/*\" \"src/**/*.{ts,tsx}\" \"test/**/*.{ts,tsx}\"": [

@@ -1,7 +1,7 @@
 @use '@styles/pallete.scss' as *;
 @import '@styles/mixins.scss';
 
-form {
+.startForm {
   display: flex;
   flex-direction: column;
   margin: 1.6rem;
