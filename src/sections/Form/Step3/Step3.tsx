@@ -4,6 +4,7 @@ import { Step } from '@features/stepper/stepperSlice'
 import { RootState } from '@app/store'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
+import { sendData } from '@helpers/sendData'
 import styles from './index.module.scss'
 
 const Step2 = () => {
@@ -16,6 +17,9 @@ const Step2 = () => {
   const onSubmit = (data: any, e: any) => {
     console.log(data)
     handleCompleteStep()
+    sendData('https://api.sbercloud.ru/content/v1/bootcamp/frontend', {
+      test: '123',
+    })
     redirectSubmit(e)
   }
 
