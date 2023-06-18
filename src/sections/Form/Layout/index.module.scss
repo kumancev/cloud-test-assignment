@@ -1,7 +1,27 @@
+@import '@styles/mixins.scss';
+
 .root {
-  display: flex;
+  position: absolute;
+  width: 900px;
+  height: 704px; // 92px button m-b
+  left: calc(50% - 900px / 2);
+  top: 1.5rem;
+  background-color: #fff;
+  border-radius: 1.5rem;
+
+  @include mediaMax(920) {
+    width: 580px;
+    height: 600px;
+    left: calc(50% - 580px / 2);
+  }
+
+  @include mediaMax(560) {
+    width: 360px;
+    height: 600px;
+    left: calc(50% - 360px / 2);
+  }
 }
 
 .content {
-  margin: 20px auto;
+  margin: 3.875rem 6.875rem 5.75rem;
 }
