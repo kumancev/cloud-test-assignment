@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 export type Step = {
   id: number
-  state: 'active' | 'completed' | 'notComplete'
+  state: 'active' | 'completed' | 'notCompleted'
 }
 
 export type StepperState = {
@@ -12,8 +12,8 @@ export type StepperState = {
 const initialState: StepperState = {
   steps: [
     { id: 1, state: 'active' },
-    { id: 2, state: 'notComplete' },
-    { id: 3, state: 'notComplete' },
+    { id: 2, state: 'notCompleted' },
+    { id: 3, state: 'notCompleted' },
   ],
 }
 export const stepperSlice = createSlice({
@@ -24,7 +24,7 @@ export const stepperSlice = createSlice({
       state: StepperState,
       action: PayloadAction<{
         stepId: number
-        newState: 'active' | 'completed'
+        newState: 'active' | 'completed' | 'notCompleted'
       }>
     ) => {
       const { stepId, newState } = action.payload
